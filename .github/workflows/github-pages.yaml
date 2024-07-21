@@ -1,9 +1,12 @@
 name: Deploy GitHub Pages
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "Update API Docs"
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -16,6 +19,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: contains(github.event.workflow_run.conclusion, 'success')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -28,7 +32,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './pages'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
