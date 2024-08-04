@@ -4,7 +4,7 @@ window.onload = function() {
   // the following lines will be replaced by docker/configurator, when it runs in a docker-container
   window.ui = SwaggerUIBundle({
     urls: [{
-      url: "../openapi/schemas.yaml",
+      url: "./openapi/schemas.yaml",
       name: "Common Schema"
     }
     ],

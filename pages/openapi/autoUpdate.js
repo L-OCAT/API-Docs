@@ -6,7 +6,7 @@ const STANDARD_CHARSET = 'UTF-8';
 
 const baseDirectory = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '../..');
 const apiYamlDirectory = path.join(baseDirectory, 'openapi');
-const swaggerPath = path.join(baseDirectory, 'pages/swagger-initializer.js');
+const swaggerPath = path.join(baseDirectory, '../swagger-initializer.js');
 
 function readFile(filePath, encoding = STANDARD_CHARSET) {
     try {

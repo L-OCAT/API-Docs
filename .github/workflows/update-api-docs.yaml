@@ -29,10 +29,10 @@ jobs:
 
       - name: Copy OpenAPI YAML Files
         run: |
-          cp -r server/docs/api/ openapi/
+          cp -r server/docs/api/ pages/openapi/
 
       - name: Run AutoUpdate Script
-        run: node ./openapi/autoUpdate.js
+        run: node ./pages/openapi/autoUpdate.js
 
       - name: Commit & Push If Changes Detected
         run: |
@@ -42,7 +42,6 @@ jobs:
             echo "No changes detected!"
             exit 0
           fi
-          git add openapi/
           git add pages/
           git commit -m '[Bot] Update API Docs'
           git push origin HEAD:${{ github.ref }}
