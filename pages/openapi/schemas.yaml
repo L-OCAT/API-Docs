@@ -28,7 +28,7 @@ components:
       properties:
         message:
           type: string
-          example: "Internal Server Error"
+          example: "Http Status Message"
           description: "HTTP 상태 메세지"
         data:
           $ref: "#/components/schemas/ErrorData"
@@ -38,7 +38,7 @@ components:
       properties:
         message:
           type: string
-          example: "Failed to send mail"
+          example: "Error Details"
           description: "오류에 대한 설명"
         code:
           type: integer
