@@ -4,7 +4,7 @@ const yaml = require('js-yaml');
 
 const STANDARD_CHARSET = 'UTF-8';
 
-const baseDirectory = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, 'pages');
+const baseDirectory = path.resolve(__dirname, 'pages');
 const apiYamlDirectory = path.join(baseDirectory, 'openapi');
 const swaggerPath = path.join(baseDirectory, 'swagger-initializer.js');
 
