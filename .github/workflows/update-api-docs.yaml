@@ -30,7 +30,7 @@ jobs:
 
       - name: Copy OpenAPI YAML Files
         run: |
-          cp -r server/docs/api/ pages/openapi/
+          cp -r server/docs/api/* pages/openapi/
 
       - name: Run AutoUpdate Script
         run: node ./autoUpdate.js
