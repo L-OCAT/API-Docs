@@ -14,8 +14,9 @@ paths:
       parameters:
         - in: header
           name: Locat-API-Key
+          schema:
+            type: string
           required: true
-          allowEmptyValue: false
           example: "EwWDJOBkmbvrPUHp2UQBC4PowNxkqr"
           description: "공개 API 키"
       requestBody:
@@ -36,8 +37,9 @@ paths:
       parameters:
         - in: header
           name: Locat-API-Key
+          schema:
+            type: string
           required: true
-          allowEmptyValue: false
           example: "EwWDJOBkmbvrPUHp2UQBC4PowNxkqr"
           description: "공개 API 키"
       requestBody:
@@ -64,8 +66,9 @@ paths:
       parameters:
         - in: header
           name: Locat-API-Key
+          schema:
+            type: string
           required: true
-          allowEmptyValue: false
           example: "EwWDJOBkmbvrPUHp2UQBC4PowNxkqr"
           description: "공개 API 키"
       requestBody:
@@ -92,8 +95,9 @@ paths:
       parameters:
         - in: header
           name: Locat-API-Key
+          schema:
+            type: string
           required: true
-          allowEmptyValue: false
           example: "EwWDJOBkmbvrPUHp2UQBC4PowNxkqr"
           description: "공개 API 키"
       requestBody:
