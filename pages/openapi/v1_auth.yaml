@@ -11,6 +11,13 @@ paths:
     description: OAuth2 사용자 인증 API
     post:
       summary: 소셜 로그인 기반 사용자 인증을 처리합니다.
+      parameters:
+        - in: header
+          name: Locat-API-Key
+          required: true
+          allowEmptyValue: false
+          example: "EwWDJOBkmbvrPUHp2UQBC4PowNxkqr"
+          description: "공개 API 키"
       requestBody:
         $ref: "#/components/requestBodies/OAuth2AuthorizeRequest"
       responses:
@@ -26,6 +33,13 @@ paths:
     description: 토큰 갱신 API
     post:
       summary: Refresh 토큰을 이용하여 Access 토큰을 갱신합니다.
+      parameters:
+        - in: header
+          name: Locat-API-Key
+          required: true
+          allowEmptyValue: false
+          example: "EwWDJOBkmbvrPUHp2UQBC4PowNxkqr"
+          description: "공개 API 키"
       requestBody:
         $ref: "#/components/requestBodies/TokenRenewRequest"
       responses:
@@ -47,6 +61,13 @@ paths:
     description: 이메일 인증 메일 발송 요청 API
     post:
       summary: 이메일 인증 코드를 발송합니다.
+      parameters:
+        - in: header
+          name: Locat-API-Key
+          required: true
+          allowEmptyValue: false
+          example: "EwWDJOBkmbvrPUHp2UQBC4PowNxkqr"
+          description: "공개 API 키"
       requestBody:
         $ref: "#/components/requestBodies/EmailVerificationRequest"
       responses:
@@ -68,6 +89,13 @@ paths:
     description: 이메일 인증 코드 검증 API
     post:
       summary: 이메일 인증 코드를 검증합니다.
+      parameters:
+        - in: header
+          name: Locat-API-Key
+          required: true
+          allowEmptyValue: false
+          example: "EwWDJOBkmbvrPUHp2UQBC4PowNxkqr"
+          description: "공개 API 키"
       requestBody:
         $ref: "#/components/requestBodies/EmailVerificationRequest"
       responses:
