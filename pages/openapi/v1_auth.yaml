@@ -72,7 +72,7 @@ paths:
           example: "EwWDJOBkmbvrPUHp2UQBC4PowNxkqr"
           description: "공개 API 키"
       requestBody:
-        $ref: "#/components/requestBodies/EmailVerificationRequest"
+        $ref: "#/components/requestBodies/SendVerificationEmailRequest"
       responses:
         204:
           description: "인증 메일 발송 성공"
@@ -127,6 +127,13 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/TokenRenewRequest"
+    SendVerificationEmailRequest:
+      required: true
+      description: "이메일 인증 요청"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/SendVerificationEmailRequest"
     EmailVerificationRequest:
       required: true
       description: "이메일 인증 요청"
@@ -207,6 +214,16 @@ components:
           type: string
           example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.***"
           description: "Refresh 토큰"
+    SendVerificationEmailRequest:
+      description: "인증 코드 발송 요청"
+      type: object
+      required:
+        - email
+      properties:
+        email:
+          type: string
+          example: "helloworld@locat.com"
+          description: "인증 메일을 보낼 이메일 주소"
     EmailVerificationRequest:
       description: "이메일 인증 요청"
       type: object
@@ -221,5 +238,3 @@ components:
           type: string
           example: "B9AF2S"
           description: "이메일 인증 코드(6자리)"
-
-
