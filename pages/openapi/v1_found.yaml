@@ -36,11 +36,25 @@ paths:
             example: 127.051
         - name: r
           in: query
-          description: "검색 반경(단위: m) / 기본값: 500"
+          description: "검색 반경(단위: m) / 기본값: 50"
           required: false
           schema:
             type: number
             example: 1000
+        - name: page
+          in: query
+          description: "페이지 번호(1부터 시작) / 기본값: 1"
+          required: false
+          schema:
+            type: integer
+            example: 1
+        - name: size
+          in: query
+          description: "페이지 크기 / 기본값: 10"
+          required: false
+          schema:
+            type: integer
+            example: 10
         - name: sort
           in: query
           description: "정렬 기준({정렬할 필드},{방향}) / 기본 정렬: 등록일 내림차순"
