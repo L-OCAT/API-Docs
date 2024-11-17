@@ -79,11 +79,7 @@ paths:
               example: "createdAt,desc"
       responses:
         '200':
-          description: "성공"
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/responses/GeoItemAdminSearchResponse"
+          $ref: "#/components/responses/GeoItemAdminSearchResponse"
 components:
   responses:
     GeoItemAdminSearchResponse:
